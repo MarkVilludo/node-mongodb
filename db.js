@@ -1,10 +1,7 @@
 // db.js
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://markvilludo:vgx77glPxRBsskWC@cluster0.up6jc5z.mongodb.net/activities?retryWrites=true&w=majority', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
+mongoose.connect('mongodb+srv://markvilludo:vgx77glPxRBsskWC@cluster0.up6jc5z.mongodb.net/activities?retryWrites=true&w=majority')
 .then(() => console.log('Connected to MongoDB'))
 .catch(err => console.error('Error connecting to MongoDB:', err));
 
