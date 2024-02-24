@@ -73,10 +73,6 @@ $(document).ready(function() {
             <td>${task.title}</td>
             <td>${task.description}</td>
             <td>${task.completed ? 'Yes' : 'No'}</td>
-            <td>
-              <!-- <a href="/tasks/edit/${task._id}" class="text-blue-500 underline">Edit</a> --!>
-              <a href="/tasks/delete/${task._id}" class="text-red-500 underline ml-2">Delete</a>
-            </td>
           </tr>`
         );
       });

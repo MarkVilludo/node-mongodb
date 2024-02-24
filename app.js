@@ -9,22 +9,8 @@ var cors = require('cors')
 //it's a common practice to use the app variable to represent the Express application
 const app = express();
 app.use(bodyParser.json());
+app.use(cors())
 app.use(express.static(path.join(__dirname, 'public')));
-
-
-// Enable CORS for a specific origin
-app.use((req, res, next) => {
-  const allowedOrigins = ['https://node-mongodb-wruk.onrender.com'];
-  const origin = req.headers.origin;
-
-  if (allowedOrigins.includes(origin)) {
-    res.setHeader('Access-Control-Allow-Origin', origin);
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  }
-  next();
-});
-
 
 // HTML Rendering Routes
 app.get('/', (req, res) => {
