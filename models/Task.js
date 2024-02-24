@@ -6,4 +6,5 @@ const taskSchema = new mongoose.Schema({
   completed: Boolean
 });
 
+//collection name "tasks" it will convert as plural
 module.exports = mongoose.model('task', taskSchema);
