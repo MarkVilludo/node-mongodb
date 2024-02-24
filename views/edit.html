@@ -1,0 +1,44 @@
+<!-- views/edit.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <title>Edit Task</title>
+</head>
+<body class="bg-gray-100">
+
+  <div class="container mx-auto p-4">
+
+    <h1 class="text-2xl font-bold mb-4">Edit Task</h1>
+
+    <!-- Task Edit Form -->
+    <form id="editTaskForm">
+      <input type="hidden" id="taskId" name="taskId">
+
+      <div class="mb-4">
+        <label for="title" class="block text-gray-600">Title</label>
+        <input type="text" id="title" name="title" class="w-full p-2 border border-gray-300 rounded">
+      </div>
+
+      <div class="mb-4">
+        <label for="description" class="block text-gray-600">Description</label>
+        <textarea id="description" name="description" class="w-full p-2 border border-gray-300 rounded"></textarea>
+      </div>
+
+      <div class="mb-4">
+        <label for="completed" class="block text-gray-600">Completed</label>
+        <input type="checkbox" id="completed" name="completed" class="mr-2">
+        <span class="text-gray-700">Mark as completed</span>
+      </div>
+
+      <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded">Update Task</button>
+    </form>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="/script-edit-delete.js" defer></script>
+</body>
+</html>
